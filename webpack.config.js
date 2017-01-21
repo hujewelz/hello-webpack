@@ -7,17 +7,16 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: 'http://localhost:8080',
-    filename: '[name].js',
-    chunkFilename: '[name].[hash].js'
+    publicPath: '',
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[name].[hash].js'
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json'],
     alias: {
       'src': path.resolve(__dirname, './src'),
       'assets': path.resolve(__dirname, './src/assets'),
-      'components': path.resolve(__dirname, './src/components'),
-      'img': path.resolve(__dirname, './static/img')
+      'components': path.resolve(__dirname, './src/components')
     }
   },
   module: {
@@ -40,7 +39,7 @@ module.exports = {
         loader: 'url',
         query: {
           limit: 10000,
-          name: path.resolve(__dirname, './static/img/[name].[hash:7].[ext]')
+          name: path.join('static', 'img/[name].[hash:7].[ext]')
         }
       }
     ]
@@ -50,6 +49,6 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    }),
+    })
   ]
 }

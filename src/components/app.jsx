@@ -1,12 +1,18 @@
 import React from 'react'
-import { render } from 'react-dom'
-import Logo from './assets/logo.svg'
+import Logo from 'assets/img/logo.svg'
+import Girl from 'assets/img/girl.jpg'
+import 'assets/main.css'
 
-const element = (
-  <h1>Hello Webpack!!!</h1>
-  <img src={Logo} />
-)
-render(
-  element,
-  document.getElementById('app')
-)
+export default class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <header>
+          <img className="logo" src={Logo}/>
+          <h1>Hello {this.props.name}</h1>
+        </header>
+        <div><img src={Girl} /></div>
+      </div>
+    )
+  }
+}

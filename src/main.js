@@ -1,19 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Logo from 'img/logo.svg'
-import Girl from 'img/girl.jpg'
-import 'assets/main.css'
+import App from 'components/app'
 
-console.log(Girl)
-const element = (
-  <div>
-    <h1>Hello Webpack!!!</h1>
-    <img className="logo" src={Logo}/>
-    <img src={Girl} />
-  </div>
-)
 render(
-  element,
+  <App name='Webpack' />,
   document.getElementById('app')
 )
-  // document.write('hello webpack')

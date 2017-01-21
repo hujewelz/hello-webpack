@@ -4,9 +4,14 @@ body {
   color: green;
   text-align: center;
 }
+header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
 h1 {
   font-size: 60px;
 }
 .logo {
-  width: 200px;
+  width: 100px;
 }
